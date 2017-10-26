@@ -208,6 +208,9 @@ configuration
 					layer.msg('修改失败');
 				}
 			})
+			.error(function () {
+				
+			})
 		});
 	}
 })
@@ -223,6 +226,18 @@ configuration
 //  })
 	$scope.name = $stateParams.id;
 	console.log($scope.name);
+	$http.post('php/download.php',{id:$stateParams.id})
+	.success(function (respose) {
+		$scope.id = angular.toJson(respose[0].id);
+		$scope.user = angular.toJson(respose[0].user);
+		$scope.details = angular.toJson(respose[0].details);
+		$scope.images = angular.toJson(respose[0].images);
+	})
+})
+.filter("myFilter",() => {
+	return function (value) {
+		return value = value.split('"').join("");
+	}
 })
 
 

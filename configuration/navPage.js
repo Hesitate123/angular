@@ -45,14 +45,13 @@ configuration
 
 
 .config(($stateProvider, $urlRouterProvider) => {
-	$urlRouterProvider.otherwise("/home");
+	$urlRouterProvider.otherwise("/bookrack");
 	$stateProvider
 	.state('bookrack',{
 		name:"bookrack",
 		url:"/bookrack",
 		templateUrl:'sabPage/main.html',
-		controller:'bookrack',
-		params: {workpieceList:null}
+		controller:'bookrack'
 	})
 	.state('community',{
 		name:"community",
@@ -100,6 +99,7 @@ configuration
 		name:"download",
 		url:"/download",
 		templateUrl:'sabPage/download.html',
-		controller:'download'
+		controller:'download',
+		params: {id:null}
 	})
 })
