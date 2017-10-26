@@ -233,6 +233,7 @@ configuration
 		$scope.details = angular.toJson(respose[0].details);
 		$scope.images = angular.toJson(respose[0].images);
 	})
+	.erres(function (respose) {}
 })
 .filter("myFilter",() => {
 	return function (value) {
