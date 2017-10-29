@@ -19,4 +19,10 @@
   width: 80%;
   float: right;
 }
+.download_top > span > h2 {
+  width: 100%;
+}
+.download_top > span > p {
+  width: 100%;
+}
 /*# sourceMappingURL=angular-download.css.map */
